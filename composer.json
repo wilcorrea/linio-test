@@ -1,0 +1,23 @@
+{
+  "name": "linio/program",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "scripts": {
+    "app": "php app/index.php",
+    "tests": "./vendor/bin/phpunit"
+  },
+  "require": {
+    "php": ">=7.1",
+    "phpunit/phpunit": "^7.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Linio\\": "app/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\Linio\\": "tests/"
+    }
+  }
+}

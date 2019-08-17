@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  linio-php-test:
+    image: webdevops/php-dev:7.3
+    user: application
+    container_name: linio-php-test
+    working_dir: /workspace/php
+    volumes:
+      - .:/workspace/php
+    environment:
+      - PHP_MAX_EXECUTION_TIME=86400
+      - PHP_DEBUGGER=xdebug
+      - XDEBUG_REMOTE_PORT=9000
+      - XDEBUG_REMOTE_AUTOSTART=on
+      - XDEBUG_REMOTE_CONNECT_BACK=on
+      - XDEBUG_REMOTE_HOST=${XDEBUG_REMOTE_HOST}
